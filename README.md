@@ -51,3 +51,53 @@ Input Layer (32x32x3)<br>
 → Dense (128)<br>
 → Dropout (0.5)<br>
 → Output Layer (Softmax - 43 classes)<br>
+
+
+---
+
+## ⚙️ Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/vidhirawat10/Traffic-Signs-Detection.git
+cd Traffic-Signs-Detection
+
+# Install required packages
+pip install -r requirements.txt
+```
+Or run directly in Google Colab using the .ipynb notebook.
+
+---
+
+## 🚀 Usage
+Run the model training and evaluation notebook:
+```bash
+# In Jupyter Notebook or Google Colab
+Open: Intern_TrafficSignDetect_Assignment.ipynb
+Run all cells step-by-step
+```
+
+To use the trained model for prediction:
+
+```bash
+from tensorflow.keras.models import load_model
+import cv2
+import numpy as np
+
+model = load_model('traffic_sign_model.h5')
+img = cv2.imread('test_image.png')
+img = cv2.resize(img, (32, 32)) / 255.0
+prediction = model.predict(np.expand_dims(img, axis=0))
+print("Predicted Sign Class:", np.argmax(prediction))
+```
+
+---
+
+## 📈 Results
+Metric	Value
+Training Acc.	88.7%
+Test Acc.	85.3%
+Loss	0.15
+
+Confusion matrix and detailed analysis available in:
+📄 Analysis Report.pdf
