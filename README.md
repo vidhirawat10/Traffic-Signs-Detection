@@ -7,7 +7,6 @@ Welcome to the **Traffic Signs Detection** project! This repository contains a d
 ## 📑 Table of Contents
 
 - [About](#about)
-- [Demo](#demo)
 - [Dataset](#dataset)
 - [Model Architecture](#model-architecture)
 - [Installation](#installation)
@@ -22,13 +21,6 @@ Welcome to the **Traffic Signs Detection** project! This repository contains a d
 ## 🧠 About
 
 The goal of this project is to build a model capable of recognizing traffic signs to enhance autonomous vehicle systems and driver assistance applications. The project was developed as part of an internship assignment.
-
----
-
-## 🎥 Demo
-
-![Demo GIF](https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif)  
-*Above is a sample animation of the model predicting traffic signs in real-time.*
 
 ---
 
@@ -48,3 +40,14 @@ The goal of this project is to build a model capable of recognizing traffic sign
 
 The model is built using TensorFlow/Keras with the following architecture:
 
+Input Layer (32x32x3)<br>
+→ Conv2D (32 filters, 3x3)<br>
+→ ReLU<br>
+→ MaxPooling (2x2)<br>
+→ Conv2D (64 filters, 3x3)v
+→ ReLU<br>
+→ MaxPooling (2x2)<br>
+→ Flatten<br>
+→ Dense (128)<br>
+→ Dropout (0.5)<br>
+→ Output Layer (Softmax - 43 classes)<br>
