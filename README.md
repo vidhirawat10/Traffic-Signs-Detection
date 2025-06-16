@@ -101,3 +101,15 @@ Loss	0.15
 
 Confusion matrix and detailed analysis available in:
 📄 Analysis Report.pdf
+
+---
+
+## 🙋‍♀️ Contributor
+@vidhirawat10
+
+---
+
+## ⭐️ Show Your Support
+If you liked this project, feel free to ⭐️ the repository and share it !!
+
+---
